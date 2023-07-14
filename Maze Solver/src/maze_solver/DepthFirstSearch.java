@@ -16,16 +16,13 @@ public class DepthFirstSearch {
 
     static List<Integer> backtrackPath(Pair cur) {
         List<Integer> path = new ArrayList<>();
-        Pair iter = cur;
-
+        
+	    Pair iter = cur;
         while (iter != null) {
             path.add(iter.x);
             path.add(iter.y);
-    
             iter = iter.parent;
         }
-
-        System.out.println(path);
 
         return path;
     }
