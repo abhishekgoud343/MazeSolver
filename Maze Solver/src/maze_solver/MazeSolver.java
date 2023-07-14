@@ -2,7 +2,6 @@ package maze_solver;
 
 import java.util.*;
 import javax.swing.*;
-
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -16,8 +15,7 @@ public class MazeSolver extends JFrame {
         {1, 0, 1, 1, 0, 1, 1, 0, 0, 1},
         {1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
         {1, 0, 1, 0, 0, 1, 1, 1, 1, 1},
-        {1, 0, 0, 0, 0, 0, 0, 1, 1, 1},
-        {1, 0, 0, 0, 0, 0, 0, 9, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 9, 1, 1},
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
 
