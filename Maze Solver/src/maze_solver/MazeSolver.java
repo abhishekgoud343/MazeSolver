@@ -22,9 +22,9 @@ public class MazeSolver extends JFrame {
     public List<Integer> path = new ArrayList<>();
 
     public MazeSolver() {
-        setTitle("Maze Solver");
-        setSize(500, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("Maze Solver");
+        this.setSize(500, 500);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         path = DepthFirstSearch.searchPath(maze);
     }
