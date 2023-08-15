@@ -12,7 +12,7 @@ The source cell is taken to be the cell with coordinates (1, 1), where the coord
 The solution path is graphically represented by a series of green squares tracing the path. Note that there can be multiple paths that satisfy the requirement, only one of them is displayed in the output.
 
 
-# Instructions to run the Project locally
+## Instructions to run the Project locally
 1. Open the project folder (Maze Solver) in any IDE or code editor such as IntelliJ IDEA, VS Code, Eclipse etc.  
 2. Run the java file at the location Maze Solver/src/maze_solver/MazeSolver.java  
 3. This java file contains the _main_ function and therefore the project can be thus run by running the aforementioned java file.  
