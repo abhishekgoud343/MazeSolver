@@ -25,6 +25,7 @@ public class MazeSolver extends JFrame {
         this.setTitle("Maze Solver");
         this.setSize(600, 600);
         this.setResizable(false);
+        this.getContentPane().setBackground(Color.PINK);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         path = DepthFirstSearch.searchPath(maze);
@@ -32,6 +33,7 @@ public class MazeSolver extends JFrame {
 
     @Override
     public void paint(Graphics g) {
+        super.paint(g);
         g.translate(100, 100);
 
         for (int i = 0; i < maze.length; ++i)
@@ -53,13 +55,13 @@ public class MazeSolver extends JFrame {
             int pathy = path.get(i + 1);
 
             g.setColor(Color.GREEN);
-            g.fillRect(40 * pathx + 3, 40 * pathy + 3, 35, 35);
+            g.fillRect(40 * pathx + 4, 40 * pathy + 4, 33, 33);
 
             // System.out.print("(" + pathx + ", " + pathy + "), ");
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         MazeSolver app = new MazeSolver();
         app.setVisible(true);
     }
