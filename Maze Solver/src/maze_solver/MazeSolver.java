@@ -6,7 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class MazeSolver extends JFrame {
-    private int[][] maze = {
+    private final int[][] maze = {
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
         {1, 0, 1, 0, 0, 0, 1, 0, 0, 1},
         {1, 0, 0, 1, 0, 0, 1, 0, 0, 1},
@@ -19,11 +19,12 @@ public class MazeSolver extends JFrame {
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
 
-    public List<Integer> path = new ArrayList<>();
+    List<Integer> path;
 
     public MazeSolver() {
         this.setTitle("Maze Solver");
-        this.setSize(500, 500);
+        this.setSize(600, 600);
+        this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         path = DepthFirstSearch.searchPath(maze);
@@ -35,17 +36,16 @@ public class MazeSolver extends JFrame {
 
         for (int i = 0; i < maze.length; ++i)
             for (int j = 0; j < maze[0].length; ++j) {
-                Color color;
-                switch (maze[i][j]) {
-                    case 1 : color = Color.BLACK; break;
-                    case 9 : color = Color.RED; break;
-                    default : color = Color.WHITE; break;
-                }
+                Color color = switch (maze[i][j]) {
+                    case 1 -> Color.BLACK;
+                    case 9 -> Color.RED;
+                    default -> Color.WHITE;
+                };
                 g.setColor(color);
-                g.fillRect(30 * j, 30 * i, 30, 30);
+                g.fillRect(40 * j, 40 * i, 40, 40);
                 
                 g.setColor(Color.BLUE);
-                g.drawRect(30 * j, 30 * i, 30, 30);
+                g.drawRect(40 * j, 40 * i, 40, 40);
             }
         
         for (int i = 0; i < path.size(); i += 2) {
@@ -53,9 +53,9 @@ public class MazeSolver extends JFrame {
             int pathy = path.get(i + 1);
 
             g.setColor(Color.GREEN);
-            g.fillRect(30 * pathx + 3, 30 * pathy + 3, 24, 24);
+            g.fillRect(40 * pathx + 3, 40 * pathy + 3, 35, 35);
 
-            System.out.print("(" + pathx + ", " + pathy + "), ");
+            // System.out.print("(" + pathx + ", " + pathy + "), ");
         }
     }
 
