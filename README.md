@@ -1,5 +1,5 @@
 # Maze Solver
-The **Maze Solver** is a Desktop application that finds the shortest path to the destination point in a Maze represented by a 2D grid.
+The **Maze Solver** is a Desktop application, built using the Java Swing framework. The application finds the shortest path to the destination point in a Maze represented by a 2D grid.
 
 The white cells represent traversable cells through which a path could be valid.
 
@@ -13,6 +13,6 @@ The solution path is graphically represented by a series of green squares tracin
 
 ## Instructions to run the Project locally
 1. Open the project folder (```Maze Solver```) in any IDE or code editor such as IntelliJ IDEA, VS Code, Eclipse etc.  
-2. Run the java file at the location ```/Maze Solver/src/maze_solver/MazeSolver.java```. This java file contains the _main_ function and therefore the project can be thus run by running the aforementioned java file.  
+2. Run the java file at the location ```/Maze Solver/src/maze_solver/MazeSolver.java```. This file contains the _main_ function and therefore the project can be executed by running the specified program file.  
 3. The application will load in a new window.  
 4. The maze pattern can be changed by changing the values of the _maze_ array in the main java file.
